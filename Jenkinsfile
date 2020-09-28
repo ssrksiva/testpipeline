@@ -1,5 +1,4 @@
 pipeline {
-def DOCKER_HOME = tool 'docker'
   agent {
         docker {
             image 'maven:3-alpine' 
