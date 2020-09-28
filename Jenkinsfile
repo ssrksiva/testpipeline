@@ -1,15 +1,12 @@
 node {
-   env.JAVA_HOME = tool 'jdk-8-oracle'
+   env.JAVA_HOME = tool 'jdk8'
    def mvnHome = tool 'Maven 3.3.1'
    env.PATH="${env.JAVA_HOME}/bin:${mvnHome}/bin:${env.PATH}"
    
    stage 'Checkout'
-   git url: 'https://github.com/hypery2k/angular-spring-boot-sample.git'
+   git url: 'https://github.com/ssrksiva/testpipeline.git'
 
    stage 'Build'
-   env.JAVA_HOME = tool 'jdk-8-oracle'
-   env.PATH="${env.JAVA_HOME}/bin:${mvnHome}/bin:${env.PATH}"
-   sh "echo JAVA_HOME=$JAVA_HOME"
    sh "${mvnHome}/bin/mvn clean package"
    
    stage 'Unit-Tests'
