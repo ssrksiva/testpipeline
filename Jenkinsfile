@@ -7,7 +7,7 @@ node {
    git url: 'https://github.com/ssrksiva/testpipeline.git'
 
    stage 'Build'
-   sh "echo ${DOCKER_HOME}"
+   sh "echo ${env.DOCKER_HOME}"
    
    stage 'Unit-Tests'
    sh "${mvnHome}/bin/mvn test"
