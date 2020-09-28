@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo "${DOCKER_HOME}"'
+        sh 'echo ${DOCKER_HOME}'
       }
     }
 
