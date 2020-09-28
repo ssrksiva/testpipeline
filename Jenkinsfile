@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo ${tool \'docker\'}'
+        sh 'echo "${tool \'docker\'}"'
       }
     }
 
