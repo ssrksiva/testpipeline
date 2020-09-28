@@ -7,6 +7,8 @@ node {
    git url: 'https://github.com/hypery2k/angular-spring-boot-sample.git'
 
    stage 'Build'
+   env.JAVA_HOME = tool 'jdk-8-oracle'
+   env.PATH="${env.JAVA_HOME}/bin:${mvnHome}/bin:${env.PATH}"
    sh "echo JAVA_HOME=$JAVA_HOME"
    sh "${mvnHome}/bin/mvn clean package"
    
