@@ -3,9 +3,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo "${tool \'docker\'}"'
+        sh 'echo "${DOCKER_HOME}"'
       }
     }
 
+  }
+  environment {
+    DOCKER_HOME = 'tool \'docker\''
   }
 }
