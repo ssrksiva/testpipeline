@@ -14,4 +14,8 @@ pipeline {
     }
 
   }
+  environment {
+    JAVA_HOME = 'tool \'jdk8\''
+    mvnHome = 'tool \'Maven 3.3.1\''
+  }
 }
