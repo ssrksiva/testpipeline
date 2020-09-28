@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh '''echo $JAVA_HOME
-echo $MAVEN_HOME'''
+        sh 'echo $MAVEN_HOME'
       }
     }
 
