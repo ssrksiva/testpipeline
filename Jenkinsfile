@@ -7,9 +7,10 @@ pipeline {
 
   }
   stages {
-    stage('Build') {
+    stage('') {
       steps {
-        sh 'mvn -B -DskipTests clean package'
+        sh '''echo $JAVA_HOME
+echo $MAVEN_HOME'''
       }
     }
 
