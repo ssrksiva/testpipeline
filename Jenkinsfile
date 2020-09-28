@@ -7,6 +7,7 @@ node {
    git url: 'https://github.com/hypery2k/angular-spring-boot-sample.git'
 
    stage 'Build'
+   sh "echo JAVA_HOME=$JAVA_HOME"
    sh "${mvnHome}/bin/mvn clean package"
    
    stage 'Unit-Tests'
